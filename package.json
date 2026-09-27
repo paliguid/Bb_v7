@@ -1,0 +1,28 @@
+{
+  "name": "BreadBai",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "oxlint",
+    "preview": "vite preview",
+    "verify": "node scripts/verify-lessons.mjs && node scripts/verify-pcb.mjs && node scripts/verify-mech.mjs && node scripts/verify-mech-render.mjs && node scripts/verify-mech-lessons.mjs && node scripts/verify-systems.mjs",
+    "test:ui": "node scripts/ui/pcb.test.mjs && node scripts/ui/workbench.test.mjs && node scripts/ui/mech.test.mjs && node scripts/ui/systems.test.mjs",
+    "test": "npm run verify && npm run test:ui"
+  },
+  "dependencies": {
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "three": "^0.186.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.7",
+    "@vitejs/plugin-react": "^6.1.1",
+    "jsdom": "^30.1.0",
+    "oxlint": "^1.81.0",
+    "vite": "^8.3.0"
+  }
+}
